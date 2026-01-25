@@ -1,0 +1,16 @@
+
+
+/* Primer commit: Uso de colores, fuentes y márgenes consistentes en un archivo externo style.css.. 1 ejercicio */
+p{color: blue;
+font-size: 18px;
+text-align: left;}
+h2{color: black;
+font-size: 20px;}
+a{color:darkblue;
+font-size:16px;
+text-decoration: underline;
+text-decoration-color: red;}
+h3{color: rgb(12, 12, 76);
+font-size: 22px;
+text-decoration: underline;
+text-decoration: color(srgb red green blue);}
