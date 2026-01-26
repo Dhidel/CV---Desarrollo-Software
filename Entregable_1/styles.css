@@ -156,6 +156,14 @@ p{
     }
 }
 
+@media (max-width: 1024px) and (min-width: 769px) {
+    .main{
+        grid-template-columns: 18em 1fr;
+    }
+    #title{
+        font-size: 48px;
+    }
+}
 
 
 
