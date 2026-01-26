@@ -145,6 +145,19 @@ p{
 }
 
 
+/* Media query (Ví un video que decía que se debía hacer de mayor a menor por la cascada (y creo que también en la clase, entonces empezaré con la pantalla más grande))*/
+
+/* Desktop - casi lo mismo*/
+@media (min-width: 1025px) {
+    .main {
+        grid-template-columns: 25em 3.5fr;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+
+
 
 
 
