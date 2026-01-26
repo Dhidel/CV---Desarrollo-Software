@@ -1,94 +1,121 @@
-
-<header>
-    <h1> CV - Dhidel Jyssep Osorio Arévalo</h1>
-    <h3> Computer Scientist </h3>
-    <img src="Mi-foto.png" alt="Personal Image" width="150">
-</header>
-<nav>
-    <a href="mailto:djosorio@ufm.edu"> Contáctame</a>
-    <a href="https://github.com/Dhidel"> Mi Github</a>
-    <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/"> Mi Linkedin</a>
-</nav>
-<section id = "Personal"> 
-    <h2>Educación</h2>
-    <p>Universidad Francisco Marroquín</p>
-    <p>Estudios:</p>
-    <ul>
-        <li>Cálculo Integral</li>
-        <li>Programación en python</li>
-        <li>Programación en HTML</li>
-    </ul>
-    <p>Hobbies:</p>
-    <ul>
-        <li>Jugar Furtbol</li>
-        <li>Escuchar Música</li>
-        <li>El arte</li>
-    </ul>
-    <p>Trabajos</p>
-    <ul>
-        <li>Diseñador UI en ciudadanos</li>
-        <li>Programador en Rockstar</li>
-        <li>Creador de tienda Virtual "MYH"</li>
-    </ul>
-</section>
-<section id = Educación>
-    <h2>Educación</h2>
-    <table border="1" cellpadding="10" cellspacing="3" class="Educación">     
-        <!-- El border es para poner las líneas divisoras, el cellpadding es para agregar un espaciado dentro de cada casilla y el cellspacing es para agregar especiado afuera de cada casilla -->
-        <caption>Tabla 1 - Títulos Universitarios</caption>
-        <thead>
-            <tr>
-                <th scope="col">Año</th>
-                <th scope="col">Institución</th>
-                <th scope="col">Título Obtenido</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2024</td>
-                <td>Colegio Evangelico "Torre Fuerte"   </td>
-                <td>Bachillerato en Ciencias y Letras con Orientación en Gestión de oficinas   </td>
-            </tr>
-            <tr>
-                <td>2028</td>
-                <td>Universidad Francisco Marroquín</td>
-                <td>Ingenieria en Computer Science</td>
-            </tr>
-            <tr>
-                <td>2030</td>
-                <td>Universidad Galileo</td>
-                <td>Maestría en Data Science</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-<section id = Lenguajes>
-    <h2>Lenguajes</h2>
-    <table border="1" cellpadding="10" cellspacing="3" class="Lenguajes">
-        <caption>Tablea 2 - Lenguajes</caption>
-        <thead>
-            <tr>
-                <th scope="col">Lenguaje</th>
-                <th scope="col">Institución</th>
-                <th scope="col">Nivel</th>
-            </tr>
-        </thead>
-        <body>
-            <tr>
-                <td>Python</td>
-                <td>Universidad Francisco Marroquín</td>
-                <td>Avanzado</td>
-            </tr>
-            <tr>
-                <td>C#</td>
-                <td>Universidad Francisco Marroquín</td>
-                <td>Bajo</td>
-            </tr>
-            <tr>
-                <td>HTML</td>
-                <td>Universidad Francisco Marroquín</td>
-                <td>Intermedio</td>
-            </tr>
-        </body>
-    </table>
-</section>
+<body>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <div class="main">
+        <header class="header-site">
+            <h1 id="title"> Dhidel Jyssep Osorio Arévalo </h1>
+        </header>
+        <div class="image">
+            <img id="imagen-personal" src="Foto.png" alt="Personal Image" width="250">
+        </div>
+        <div class="profession">
+                <h4> Computer Scientist </h4>            
+        </div>
+        <section class="contacts">
+            <h3 class="sub1">Contactos</h3>
+            <p>4180-0647</p>
+            <p>Dirección: 10 avenida 35-56, zona 11. Colonia Las Charcas. Ciudad de Guatemala.</p>
+            <a href="mailto:djosorio@ufm.edu"> Gmail</a>
+            <a href="https://github.com/Dhidel"> Mi Github</a>
+            <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/"> Mi Linkedin</a>            
+        </section>
+        <section class="skills">
+            <h3 class="sub1">Aptitudes</h3>
+            <ul class="skills-list">
+                <li>Soft & hard skills</li>
+                <li>Entendimientos contables</li>
+                <li>Análisis financieros</li>
+                <li>Gestión personal</li>
+                <li>Evaluación de utilización de recursos</li>
+            </ul>
+        </section>
+        <section class="spoken-lenguages">
+            <h3 class="sub1">Lenguajes</h3>
+            <p class="sub">Ingles: B1 - Intermedio</p>
+            <p class="sub">Frances: Nulo</p>
+            <p class="sub">Portugues: Nulo</p>
+        </section>
+        <section class="diplomas">
+            <h3 class="sub1">Diplomas</h3>
+            <h4>Liderazgo</h4>
+            <p>Link de la imagen</p>
+            <h4>Desarrollador Frontend</h4>
+            <p>Link de la imagen</p>
+        </section>
+        <section class="job-training">
+            <h3 class="sub2">Formación Laboral</h3>
+            <ul class="job-list">
+                <li>Diseñador UI en ciudadanos</li>
+                <li>Programador en Rockstar</li>
+                <li>Creador de tienda Virtual "MYH"</li>
+            </ul>
+        </section>
+        <section class="academic-training">
+            <h3 class="sub2">Formación académica</h3>
+            <table border="1" cellpadding="10" cellspacing="0" class="educación">     
+                <!-- El border es para poner las líneas divisoras, el cellpadding es para agregar un espaciado dentro de cada casilla y el cellspacing es para agregar especiado afuera de cada casilla -->
+                <caption>Tabla 1 - Títulos Universitarios</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Año</th>
+                        <th scope="col">Institución</th>
+                        <th scope="col">Título Obtenido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Colegio Evangelico "Torre Fuerte"   </td>
+                        <td>Bachillerato en Ciencias y Letras con Orientación en Gestión de oficinas   </td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td>Universidad Francisco Marroquín</td>
+                        <td>Ingenieria en Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td>Universidad Galileo</td>
+                        <td>Maestría en Data Science</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="lenguages">
+            <h3 class="sub2">Lenguajes</h3>
+            <table border="1" cellpadding="10" cellspacing="0" class="lenguajes">
+                <caption>Tablea 2 - Lenguajes</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Lenguaje</th>
+                        <th scope="col">Institución</th>
+                        <th scope="col">Nivel</th>
+                    </tr>
+                </thead>
+                <body>
+                    <tr>
+                        <td>Python</td>
+                        <td>Universidad Francisco Marroquín</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>Universidad Francisco Marroquín</td>
+                        <td>Bajo</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Universidad Francisco Marroquín</td>
+                        <td>Intermedio</td>
+                    </tr>
+                </body>
+            </table>
+        </section>
+        <section class="other-studies">
+            <h3 class="sub2">Otros Estudios</h3>
+            <h4>Minor en finanzas</h4>
+            <p>Universidad Francisco Marroquín</p>
+        </section>
+    </div>
+</body>
