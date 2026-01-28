@@ -28,9 +28,6 @@
     display: grid;
 }
 
-#imagen-personal{
-    border-radius: 10px;
-}
 
 .profession{
     grid-column: 2/3;
