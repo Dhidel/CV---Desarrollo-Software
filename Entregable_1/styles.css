@@ -246,3 +246,8 @@ body {
 .dark-mode .nav-link.flows {
   color: #d1d5db;
 }
+
+.dark-mode #buscador{
+  background-color: #000000;
+  color: whitesmoke;
+}
