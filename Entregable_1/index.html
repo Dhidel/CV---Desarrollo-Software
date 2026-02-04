@@ -1,114 +1,165 @@
-<body>
+<!DOCTYPE html>
+<html lang="es">
     <head>
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
-        <!-- Este link es aparte, es para los iconos: https://icons.getbootstrap.com/ -->
+        <script src="script.js" defer></script>
     </head>
-    <div class="main">
-        <header class="header-site">
-            <h1 id="title"> Dhidel Jyssep Osorio Arévalo </h1>
+    <body class="dark-mode">
+        <header class="d-flex justify-content-center py-3 fixed-top" id="navegador">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                <a href="#personal" class="nav-link flows">Personal</a>
+                </li>
+                <li class="nav-item">
+                <a href="#skills" class="nav-link flows">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                <a href="#projects" class="nav-link flows">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                <a href="#studies" class="nav-link flows">Estudios</a>
+                </li>
+                <li class="nav-item">
+                <a href="#contacts" class="nav-link flows">Contacto</a>
+                </li>
+            </ul>
         </header>
-        <div class="image">
-            <img class="img-fluid border border-dark p-2 bg-white rounded-5" id="imagen-personal" src="Foto.png" alt="Personal Image" width="250">
+
+        <section class="seccion" id="personal">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 col-custom d-flex align-items-center justify-content-end">
+                        <img class="img-fluid me-4 rounded-1 text-end" id="imagen-personal" src="archivos/ft.png" alt="Personal Image" width="250 ">
+                    </div>
+                    <div class="col col-custom d-flex flex-column align-items-start justify-content-center ">
+                        <h2 class="texto text-start ms-4 mb-2" id="saludo"></h2>
+                        <h1 class="text-start ms-4 mb-2" id="name"> Dhidel Jyssep Osorio Arévalo </h1>
+                        <h6 class="text-start ms-4 me-5" id="profession">Estudiante de Computer Science con interés en Frontend, Backend y Data Science </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="skills">
+            <div class="container-fluid align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col col-custom d-flex flex-column" id="col-custom">
+                        <h1 class="text-center ms-4 mt-5 titulo"><i class="bi bi-code-slash"></i><br>Frontend</h1>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">HTML</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">CSS</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">Bootstrap</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">JavaScript</h6>
+
+                    </div>
+                    <div class="col col-custom d-flex flex-column" id="col-custom">
+                        <input type="text" name="buscador" id="buscador" placeholder="Buscar..." class="mt-3"> <br>
+
+                        <h1 class="text-center ms-4 mt-5 titulo"><i class="bi bi-laptop"></i><br>Backend</h1>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">Python</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">C#</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">PostMan</h6>
+                    </div>
+                    <div class="col col-custom d-flex flex-column" id="col-custom">
+                        <h1 class="text-center ms-4 mt-5 titulo"><i class="bi bi-database"></i><br>Fundamentos</h1>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">Algoritmos</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">Estructura de Datos</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">Desarrolo Web</h6>
+                        <h6 class="text-center ms-5 mt-5 subtitulo">POO</h6>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="projects">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col col-project d-flex flex-column rounded align-items-center">
+                        <h1 class="titulo text-center mt-5">NXT Board</h1>
+                        <h6 class="texto text-center mt-2">Portafolio web desarrollado con HTML, CSS, Bootstrap y JS</h6>
+                        <img  class="img-fluid rounded mt-3" src="archivos/NXT.png" alt="cv-project" width="900">
+                        <a href="https://github.com/Dhidel/NXT-Board" class="btn btn-outline-primary rounded-pill px-5 mt-3"> Repositorio</a>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col d-flex flex-column col-project rounded align-items-center">
+                        <h1 class="titulo text-center mt-5">CV Personal</h1>
+                        <h6 class="texto text-center mt-2">Organizador de tareas con base de datos</h6>
+                        <img  class="img-fluid rounded mt-1" src="archivos/cv-project.png" alt="cv-project" width="1050">
+                        <a href="https://github.com/Dhidel/CV---Desarrollo-Software" class="btn btn-outline-primary rounded-pill px-5 mt-2"> Repositorio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="studies">
+
+            <div class="options">
+                <button class="btn btn-outline-secondary" onclick="ShowHide()"><i class="bi bi-eye"></i>Mostrar/Ocultar</button>
+            </div>
+
+            <div class="container-fluid" id="tf">
+                <div class="row">
+                    <div class="col rounded" id="col-tf">
+                        <div class="row">
+                            <div class="col-4 d-flex flex-column align-items-end">
+                                <img src="archivos/tf.png" alt="Colegio Torre Fuerte" width="300">
+                            </div>
+                            <div class="col-8 d-flex flex-column align-items-center justify-content-center">
+                                <h2 class="text-start titulo-stu">Bachillerato en Ciencias y Letras con Orientación en Gestión de Oficinas</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col rounded" id="col-ufm">
+                        <div class="row">
+                            <div class="col-4 d-flex flex-column align-items-end">
+                                <img src="archivos/ufm.png" alt="Universidad Francisco Marroquín" width="300">
+                            </div>
+                            <div class="col-8 d-flex flex-column align-items-center justify-content-center">
+                                <h2 class="text-start titulo-stu">Ingeniería en Computer Science</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <section class="seccion" id="contacts">
+
+        <div class="options">
+            <button class="btn btn-outline-secondary" onclick="ShowHide1()"><i class="bi bi-eye"></i>Mostrar/Ocultar</button>
         </div>
-        <div class="profession">
-            <div class="alert alert-primary">
-                Estudiante de Computer Science con interés en desarrollo web y UI.
-            </div>           
+
+        <div class="container" id="end">
+            <div class="row">
+                <div class="col rounded" id="col-contactos">
+                    <div class="contact-wrapper">
+                        <div class="contact-content">
+                            <p><i class="bi bi-telephone-inbound-fill"></i> 4180-0647</p>
+                            <p><i class="bi bi-signpost-fill"></i> Ciudad de Guatemala</p>
+                            <p><i class="bi bi-envelope-at-fill"></i> djosorio@ufm.edu</p>
+                            <div class="contact-links">
+                            <a href="https://github.com/Dhidel"><i class="bi bi-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-actions">
+                            <button class="btn btn-outline-primary" onclick="window.print()"><i class="bi bi-download"></i> Descargar CV</button>
+                            <button class="btn btn-outline-secondary" onclick="toggleDarkMode()"> <i class="bi bi-moon-fill"></i> Modo claro / oscuro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <section class="contacts">
-            <h3 class="sub1">Contactos</h3>
-            <p><i class="bi bi-telephone-inbound-fill"></i>  4180-0647</p>
-            <p><i class="bi bi-signpost-fill"></i> Dirección: 10 avenida 35-56, zona 11. Colonia Las Charcas. Ciudad de Guatemala.</p>
-            <a href="mailto:djosorio@ufm.edu"> <i class="bi bi-envelope-at-fill"></i> Gmail</a>
-            <a href="https://github.com/Dhidel"> <i class="bi bi-github"></i> Mi Github</a>
-            <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/"> <i class="bi bi-linkedin"></i> Mi Linkedin</a>            
-        </section>
-        <section class="skills">
-            <h3 class="sub1">Aptitudes</h3>
-            <ul class="skills-list">
-                <li>Soft & hard skills</li>
-                <li>Entendimientos contables</li>
-                <li>Análisis financieros</li>
-                <li>Gestión personal</li>
-                <li>Evaluación de utilización de recursos</li>
-            </ul>
-        </section>
-        <section class="spoken-lenguages">
-            <h3 class="sub1">Lenguajes</h3>
-            <p class="sub">Ingles: B1 - Intermedio</p>
-            <p class="sub">Frances: Nulo</p>
-            <p class="sub">Portugues: Nulo</p>
-        </section>
-        <section class="diplomas">
-            <h3 class="sub1">Diplomas</h3>
-            <h4>Liderazgo</h4>
-            <p>Link de la imagen</p>
-            <h4>Desarrollador Frontend</h4>
-            <p>Link de la imagen</p>
-        </section>
-        <section class="job-training">
-            <h3 class="sub2">Formación Laboral</h3>
-            <ul class="job-list">
-                <li>Diseñador UI en ciudadanos</li>
-                <li>Programador en Rockstar</li>
-                <li>Creador de tienda Virtual "MYH"</li>
-            </ul>
-        </section>
-        <section class="academic-training">
-            <h3 class="sub2">Formación académica</h3>
-            <table border="1" cellpadding="10" cellspacing="0" class="educación">     
-                <!-- El border es para poner las líneas divisoras, el cellpadding es para agregar un espaciado dentro de cada casilla y el cellspacing es para agregar especiado afuera de cada casilla -->
-                <caption>Tabla 1 - Títulos Universitarios</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Año</th>
-                        <th scope="col">Institución</th>
-                        <th scope="col">Título Obtenido</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2024</td>
-                        <td>Colegio Evangelico "Torre Fuerte"   </td>
-                        <td>Bachillerato en Ciencias y Letras con Orientación en Gestión de oficinas   </td>
-                    </tr>
-                    <tr>
-                        <td>2028</td>
-                        <td>Universidad Francisco Marroquín</td>
-                        <td>Ingenieria en Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td>2030</td>
-                        <td>Universidad Galileo</td>
-                        <td>Maestría en Data Science</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="lenguages">
-            <h3 class="sub2">Lenguajes</h3>
-            <p>Python</p>
-            <div class="progress mb-2">
-                <div class="progress-bar bg-primary" style="width: 60%">60%</div>
-            </div>
-            <p>C#</p>
-            <div class="progress mb-2">
-                <div class="progress-bar bg-warning" style="width: 20%">20%</div>
-            </div>
-            <p>HTML / CSS</p>
-            <div class="progress mb-2">
-                <div class="progress-bar bg-success" style="width: 50%">50%</div>
-            </div>
-        </section>
-        <section class="other-studies">
-            <h3 class="sub2">Otros Estudios</h3>
-            <h4>Minor en finanzas</h4>
-            <p>Universidad Francisco Marroquín</p>
-        </section>
-        <section Class="button">
-            <a href="CV.pdf" download class="btn btn-primary">Descargar (PDF)</a>
-        </section>
-    </div>
+    </section>
 </body>
+</html>
