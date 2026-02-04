@@ -96,6 +96,10 @@
   gap: 12px;
 }
 
+.filtro{
+  display: none;
+}
+
 #navegador{
     background-color: rgba(245, 245, 245, 0.918);
 }

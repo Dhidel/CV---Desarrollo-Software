@@ -28,3 +28,13 @@ function ShowHide() {
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 }
+
+function ShowHide1() {
+    var container = document.getElementById("end");
+
+    if (container.style.display === "none") {
+        container.style.display = "block";
+    } else {
+        container.style.display = "none";
+    }
+}
