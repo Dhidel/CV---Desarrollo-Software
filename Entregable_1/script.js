@@ -24,3 +24,7 @@ function ShowHide() {
         container.style.display = "none";
     }
 }
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}

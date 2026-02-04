@@ -166,3 +166,79 @@ body {
 }
 
 
+
+/* Modo Oscuro */
+
+.dark-mode {
+  background-color: #1c1c1c;
+  color: #d1d5db;
+}
+
+.dark-mode #navegador {
+  background-color: #141414fa;
+}
+
+.dark-mode .seccion {
+  background-color: #000000;
+}
+
+
+.dark-mode .col-custom,
+.dark-mode .col-project,
+.dark-mode #col-contactos,
+.dark-mode #col-tf,
+.dark-mode #col-ufm {
+  background: #141414;
+}
+
+
+.dark-mode .titulo,
+.dark-mode #name,
+.dark-mode .titulo-stu {
+  color: #0240c6ce; 
+}
+
+
+.dark-mode .subtitulo,
+.dark-mode #profession {
+  color: #a5b4fc;
+}
+
+
+.dark-mode .texto,
+.dark-mode p,
+.dark-mode li {
+  color: #d3e1f5;
+}
+
+
+.dark-mode a {
+  color: #7dd3fc;
+}
+
+.dark-mode a:hover {
+  color: #2f5cff;
+}
+
+.dark-mode .btn-outline-primary {
+  color: #7dd3fc;
+  border-color: #7dd3fc;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #7dd3fc;
+  color: #0f1115;
+}
+
+.dark-mode .btn-outline-secondary {
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #4b5563;
+}
+
+.dark-mode .nav-link.flows {
+  color: #d1d5db;
+}
