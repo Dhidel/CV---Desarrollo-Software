@@ -13,3 +13,14 @@ function saludo() {
     document.getElementById("saludo").textContent = texto;
     }
 saludo();
+
+
+function ShowHide() {
+    var container = document.getElementById("tf");
+
+    if (container.style.display === "none") {
+        container.style.display = "block";
+    } else {
+        container.style.display = "none";
+    }
+}

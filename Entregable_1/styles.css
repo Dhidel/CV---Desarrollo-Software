@@ -156,6 +156,10 @@
         padding-bottom: 0px;
 }
 
+#tf{
+    display: block;
+}
+
 body {
   padding-top: 70px;
   background-color: whitesmoke;
