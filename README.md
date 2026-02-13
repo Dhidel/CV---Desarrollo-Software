@@ -9,3 +9,5 @@ Para hacer el botón de descargar el archivo en pdf investigué que existen dos 
 2. La más complicada pero viáble: Usar JS para poder usar unas librerías que hacen el trabajo de manera automática, su obvia ventaja es que no hay que hacerles cambios constanes y para la página es lo mejor. 
 
 Para este botón decídi utilizar la primera opción pues al no saber JS aún, prefiero hacer un proceso que aúnque es ineficiente si comprendo lo que pasa, a uno que no entenderé del todo qué y cómo lo estoy haciendo. Cuando empecemos a ver JS lo cambiaré
+
+Dejare la carpeta de Entregable_1 aunque ahora el cv esté en my-app.
