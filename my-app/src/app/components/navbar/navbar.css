@@ -1,0 +1,28 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d0d0df5;
+  padding: 22px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.nav-container a:hover {
+  color: #00bcd4;
+}
+

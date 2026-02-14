@@ -1,0 +1,30 @@
+<section class="seccion" id="skills">
+
+  <input 
+    type="text"
+    placeholder="Buscar..."
+    [(ngModel)]="buscador"
+    class="buscador"
+  />
+
+  <div class="grid">
+    <div class="columna">
+      <h1 class="titulo-skills">Frontend</h1>
+      <h6 *ngFor="let skill of filtrar(frontend)">
+        {{ skill }}
+      </h6>
+    </div>
+    <div class="columna">
+      <h1 class="titulo-skills">Backend</h1>
+      <h6 *ngFor="let skill of filtrar(backend)">
+        {{ skill }}
+      </h6>
+    </div>
+    <div class="columna">
+      <h1 class="titulo-skills">Fundamentos</h1>
+      <h6 *ngFor="let skill of filtrar(fundamentos)">
+        {{ skill }}
+      </h6>
+    </div>
+  </div>
+</section>

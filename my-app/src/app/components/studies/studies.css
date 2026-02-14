@@ -1,0 +1,80 @@
+.education {
+  background: #0d0d0d;
+  padding: 20px 40px;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.edu-card {
+  background: #111;
+  padding: 80px 80px;
+  border-radius: 30px;
+  text-align: center;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(108,140,255,0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.edu-card:hover::before {
+  opacity: 1;
+}
+
+.edu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(108,140,255,0.2);
+}
+
+.edu-logo {
+  width: 180px;
+  margin-bottom: 40px;
+}
+
+.edu-card h2 {
+  color: #6c8cff;
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edu-card p {
+  color: #bdbdbd;
+  margin-bottom: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edu-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: rgba(108,140,255,0.15);
+  color: #6c8cff;
+  font-size: 14px;
+}
+
+.edu-card.ufm::before {
+  background: radial-gradient(circle at top, rgba(255,70,70,0.18), transparent 70%);
+}
+
+.edu-card.ufm:hover {
+  box-shadow: 0 0 40px rgba(255,70,70,0.25);
+}
+
+.edu-card.ufm .edu-badge {
+  background: rgba(255,70,70,0.15);
+  color: #ff4a4a;
+}
