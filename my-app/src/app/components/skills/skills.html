@@ -10,21 +10,21 @@
   <div class="grid">
     <div class="columna">
       <h1 class="titulo-skills">Frontend</h1>
-      <h6 *ngFor="let skill of filtrar(frontend)">
+      <div *ngFor="let skill of filtrar(data.frontend)" class="subtitulo">
         {{ skill }}
-      </h6>
+      </div>
     </div>
     <div class="columna">
       <h1 class="titulo-skills">Backend</h1>
-      <h6 *ngFor="let skill of filtrar(backend)">
+        <div *ngFor="let skill of filtrar(data.backend)" class="subtitulo">
         {{ skill }}
-      </h6>
+      </div>
     </div>
     <div class="columna">
       <h1 class="titulo-skills">Fundamentos</h1>
-      <h6 *ngFor="let skill of filtrar(fundamentos)">
+      <div *ngFor="let skill of filtrar(data.fundamentos)" class="subtitulo">
         {{ skill }}
-      </h6>
+      </div>
     </div>
   </div>
 </section>
