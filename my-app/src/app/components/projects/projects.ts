@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
