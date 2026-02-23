@@ -1,23 +1,25 @@
-<section class="contact">
+<section class="contact" id="contacts">
   <div class="contact-container">
     <div class="contact-info">
       <div class="contact-item">
         <i class="icon">📞</i>
-        <span>4180-0647</span>
+        <span>{{ data.contacts.phone }}</span>
       </div>
       <div class="contact-item">
         <i class="icon">📍</i>
-        <span>Ciudad de Guatemala</span>
+        <span>{{ data.contacts.location }}</span>
       </div>
       <div class="contact-item">
         <i class="icon">✉️</i>
-        <span>djosorio@ufm.edu</span>
+        <span>{{ data.contacts.email }}</span>
       </div>
+
       <div class="contact-links">
-        <a href="https://github.com/Dhidel" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/" target="_blank">LinkedIn</a>
+      <a [href]="data.contacts.github" target="_blank">GitHub</a>
+      <a [href]="data.contacts.linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
+
     <div class="contact-actions">
       <a href="archivos/CV.pdf" download class="download-btn">
         ⬇ Descargar CV

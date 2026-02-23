@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-cv-detail',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  templateUrl: './cv-detail.html',
+  styleUrl: './cv-detail.css',
 })
-export class Navbar {
+export class CvDetail {
 
 }

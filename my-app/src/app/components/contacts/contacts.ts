@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule} from 'lucide-angular';
+import { Data } from '../../services/data';
 
 @Component({
   selector: 'app-contacts',
@@ -9,6 +10,6 @@ import { LucideAngularModule} from 'lucide-angular';
   styleUrl: './contacts.css',
 })
 export class Contacts {
-
+  constructor(public data: Data) {}
 }
 
