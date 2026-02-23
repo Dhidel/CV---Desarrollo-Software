@@ -70,6 +70,7 @@
   background: radial-gradient(circle at top, rgba(255,70,70,0.18), transparent 70%);
 }
 
+
 .edu-card.ufm:hover {
   box-shadow: 0 0 40px rgba(255,70,70,0.25);
 }
@@ -77,4 +78,13 @@
 .edu-card.ufm .edu-badge {
   background: rgba(255,70,70,0.15);
   color: #ff4a4a;
+}
+
+.edu-card::before {
+  z-index: 0;
+}
+
+.edu-card > p {
+  position: relative;
+  z-index: 1;
 }
