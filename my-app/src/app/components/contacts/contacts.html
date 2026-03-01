@@ -20,6 +20,16 @@
       </div>
     </div>
 
+    <div class="nasa-info" *ngIf="datosNasa">
+      <h3>🚀 Foto Espacial del Día</h3>
+      <img *ngIf="datosNasa.media_type === 'image'" [src]="datosNasa.url" [alt]="datosNasa.title" class="nasa-img">
+      <div *ngIf="datosNasa.media_type === 'video'">
+        <p>Hoy la NASA publicó un video:</p>
+        <a [href]="datosNasa.url" target="_blank">Ver video en YouTube</a>
+      </div>
+      <p class="nasa-caption">{{ datosNasa.title }}</p>
+    </div>
+    
     <div class="contact-actions">
       <a href="archivos/CV.pdf" download class="download-btn">
         ⬇ Descargar CV

@@ -62,3 +62,24 @@
 .contact-item lucide-mail {
   color: #6c8cff;
 }
+
+.nasa-info {
+  margin-top: 20px;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.nasa-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.nasa-caption {
+  font-size: 0.8rem;
+  color: #ccc;
+}
