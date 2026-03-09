@@ -1,24 +1,60 @@
-<section class="project-detail">
-  <h1>CV Personal</h1>
-  <p>Curriculum digital enfocado en el frontend</p>
+<section class="project-detail" *ngIf="repo">
+  <h1>{{ repo.name }}</h1>
+  <p>
+    {{ repo.description || 'Sin descripción disponible'}}
+
+  </p>
+
+ <p>
+  <strong>Fecha de creación:</strong>
+  {{ repo?.created_at ? (repo.created_at | date:'longDate') : 'No disponible' }}
+</p>
+...
+<p>
+  <strong>Valoración:</strong>
+  <span class="stars">
+    <ng-container *ngFor="let star of getStarsArray(); let i = index">
+      <span [class.filled]="star">★</span>
+    </ng-container>
+  </span>
+  ({{ repo?.stargazers_count ?? 0 }} estrellas)
+</p>
 
   <h3>Tecnologías</h3>
   <ul>
-    <li>Angular</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>TS</li>
+    <li *ngFor="let lang of languages">
+      {{ lang }}
+    </li>
   </ul>
 
-  <a 
-    href="https://github.com/Dhidel/CV---Desarrollo-Software" 
-    target="_blank"
-    class="project-btn"
-  >
+   <h3>Topics</h3>
+    <div class="topics" *ngIf="topics.length > 0; else noTopics">
+      <span class="topic-tag" *ngFor="let topic of topics">
+        {{ topic }}
+      </span>
+    </div>
+
+    <p>
+    <strong>Valoración:</strong>
+    <span class="stars">
+      <ng-container *ngFor="let star of getStarsArray(); let i = index">
+        <span [class.filled]="star">★</span>
+      </ng-container>
+    </span>
+    ({{ repo.stargazers_count }} estrellas)
+    </p>
+
+<ng-template #noTopics>
+  <p>No hay topics definidos</p>
+</ng-template>
+
+  <a [href]="repo.html_url" target="_blank" class="project-btn">
     Ver en GitHub
   </a>
-<br>
-  <button routerLink="../" class="back-btn">
+
+  <br>
+
+  <a routerLink="../" class="back-btn">
     ← Volver
-  </button>
+  </a>
 </section>
