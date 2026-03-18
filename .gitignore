@@ -1,4 +1,0 @@
-node_modules/    # Ignora toda la carpeta de librerías
-.env             # Ignora archivos de variables de entorno (seguridad)
-dist/            # Ignora carpetas de producción
-*.log            # Ignora cualquier archivo que termine en .log

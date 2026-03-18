@@ -12,7 +12,7 @@ app.use(express.json());
 // Campos: id, name, level (0–100 o beginner/intermediate/advanced), category  'frontend'(frontend/backend/devops)
 
 // Base de datos en memoria
-let projects = [
+let skills = [
     { id: 1, name: 'HTML', level: 80, category: 'frontend' },
     { id: 2, name: 'CSS', level: 70, category: 'frontend'  },
     { id: 3, name: 'Boostrap', level: 70, category: 'frontend'  },
@@ -29,17 +29,22 @@ let projects = [
     { id: 14, name: 'Creación y manejo de APIS', level: 50, category: 'Fundamentos'  },
 ]; 
 
+
+let nextId = 4;
+
 // GET / - Bienvenida
 app.get('/', (req, res) => {
-  res.json({ message: 'Bienvenido a  ectos' });
-}) GET /projects - Ver todos los proyectos
-approjects', (req, res) => {
-  res.json(projects);
+  res.json({ message: 'Bienvenido a la API de Proyectos' });
 });
 
-// GET /projects/:id - Ver un proyecto específico
-app.get('/projects/:id', (req, res) => {
-  const project = projects.find(p => p.id === parseInt(req.params.id));
+// GET /skills - Ver todos los proyectos
+app.get('/skills', (req, res) => {
+  res.json(skills);
+});
+
+// GET /skills/:id - Ver un proyecto específico
+app.get('/skills/:id', (req, res) => {
+  const project = skills.find(p => p.id === parseInt(req.params.id));
 
   if (!project) {
     return res.status(404).json({ error: 'Proyecto no encontrado' });
@@ -48,9 +53,43 @@ app.get('/projects/:id', (req, res) => {
   res.json(project);
 });
 
-// POST /projects - Crear un proyecto
-app.post('/projects', (req, res) => {
-  const { name, level } , category: 'frontend' = req.body;
+// GET /skills/:name- Ver el nombre
+app.get('/skills/:name', (req, res) => {
+  const project = skills.find(p => p.name === parseInt(req.params.name));
+
+  if (!project) {
+    return res.status(404).json({ error: 'Proyecto no encontrado' });
+  }
+
+  res.json(project);
+});
+
+// GET /skills/:level - Ver el nivel
+app.get('/skills/:level', (req, res) => {
+  const project = skills.find(p => p.level === parseInt(req.params.level));
+
+  if (!project) {
+    return res.status(404).json({ error: 'Proyecto no encontrado' });
+  }
+
+  res.json(project);
+});
+
+// GET /skills/:category - Ver una categoria específico
+app.get('/skills/:category', (req, res) => {
+  const project = skills.find(p => p.category === parseInt(req.params.category));
+
+  if (!project) {
+    return res.status(404).json({ error: 'Proyecto no encontrado' });
+  }
+
+  res.json(project);
+});
+
+
+// POST /skills - Crear un proyecto
+app.post('/skills', (req, res) => {
+  const { name, stars } = req.body;
 
   if (!name) {
     return res.status(400).json({ error: 'El campo "name" es requerido' });
@@ -59,34 +98,37 @@ app.post('/projects', (req, res) => {
   const newProject = {
     id: nextId++,
     name,
-    level: l, category: 'frontend' evel ||, category: 'frontend'  0,
+    stars: stars || 0,
   };
 
-  projects.push(newProject);
+  skills.push(newProject);
   res.status(201).json(newProject);
 });
 
-// PATCH /projects/:id - Actualizar un proyecto
-app.patch('/projects/:id', (req, res) => {
-  const index = projects.findIndex(p => p.id === parseInt(req.params.id));
+
+
+
+// PATCH /skills/:id - Actualizar un proyecto
+app.patch('/skills/:id', (req, res) => {
+  const index = skills.findIndex(p => p.id === parseInt(req.params.id));
 
   if (index === -1) {
     return res.status(404).json({ error: 'Proyecto no encontrado' });
   }
 
-  projects[index] = { ...projects[index], ...req.body };
-  res.json(projects[index]);
+  skills[index] = { ...skills[index], ...req.body };
+  res.json(skills[index]);
 });
 
-// DELETE /projects/:id - Eliminar un proyecto
-app.delete('/projects/:id', (req, res) => {
-  const index = projects.findIndex(p => p.id === parseInt(req.params.id));
+// DELETE /skills/:id - Eliminar un proyecto
+app.delete('/skills/:id', (req, res) => {
+  const index = skills.findIndex(p => p.id === parseInt(req.params.id));
 
   if (index === -1) {
     return res.status(404).json({ error: 'Proyecto no encontrado' });
   }
 
-  const deleted = projects.splice(index, 1);
+  const deleted = skills.splice(index, 1);
   res.json({ message: 'Proyecto eliminado', project: deleted[0] });
 });
 
