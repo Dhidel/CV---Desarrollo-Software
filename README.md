@@ -11,3 +11,15 @@ Para hacer el botón de descargar el archivo en pdf investigué que existen dos 
 Para este botón decídi utilizar la primera opción pues al no saber JS aún, prefiero hacer un proceso que aúnque es ineficiente si comprendo lo que pasa, a uno que no entenderé del todo qué y cómo lo estoy haciendo. Cuando empecemos a ver JS lo cambiaré
 
 Dejare la carpeta de Entregable_1 aunque ahora el cv esté en my-app.
+
+Fotos de prueba del entregable 10.
+Base: Servidor y mostrar la base de datos normal
+![Base](imagenes/base.png)
+Método Get: (Agregué un Get para cada una de las subcategorías de mis skills)
+![Base](imagenes/Get-metod.png)
+Método Post:
+![Base](imagenes/Post-metod.png)
+Método Patch:
+![Base](imagenes/Patch-metod.png)
+Método Delete:
+![Base](imagenes/Delete-metod.png)
