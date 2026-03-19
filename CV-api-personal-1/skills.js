@@ -47,40 +47,40 @@ app.get('/skills/:id', (req, res) => {
   const project = skills.find(p => p.id === parseInt(req.params.id));
 
   if (!project) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   res.json(project);
 });
 
 // GET /skills/:name- Ver el nombre
-app.get('/skills/:name', (req, res) => {
-  const project = skills.find(p => p.name === parseInt(req.params.name));
+app.get('/skills/name/:name', (req, res) => {
+  const project = skills.find(p => p.name.toLowerCase() === req.params.name.toLowerCase());
 
   if (!project) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   res.json(project);
 });
 
 // GET /skills/:level - Ver el nivel
-app.get('/skills/:level', (req, res) => {
-  const project = skills.find(p => p.level === parseInt(req.params.level));
+app.get('/skills/level/:level', (req, res) => {
+  const project = skills.find(p => p.level === req.params.level.toLowerCase());
 
   if (!project) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   res.json(project);
 });
 
 // GET /skills/:category - Ver una categoria específico
-app.get('/skills/:category', (req, res) => {
-  const project = skills.find(p => p.category === parseInt(req.params.category));
+app.get('/skills/category/:category', (req, res) => {
+  const project = skills.find(p => p.category === req.params.category.toLowerCase());
 
   if (!project) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   res.json(project);
@@ -113,7 +113,7 @@ app.patch('/skills/:id', (req, res) => {
   const index = skills.findIndex(p => p.id === parseInt(req.params.id));
 
   if (index === -1) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   skills[index] = { ...skills[index], ...req.body };
@@ -125,7 +125,7 @@ app.delete('/skills/:id', (req, res) => {
   const index = skills.findIndex(p => p.id === parseInt(req.params.id));
 
   if (index === -1) {
-    return res.status(404).json({ error: 'Proyecto no encontrado' });
+    return res.status(404).json({ error: 'Habilidad no encontrada' });
   }
 
   const deleted = skills.splice(index, 1);

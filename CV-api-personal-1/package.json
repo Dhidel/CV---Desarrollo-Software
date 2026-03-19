@@ -7,6 +7,5 @@
     "nodemon": "^3.1.14"
   },
       "scripts": {
-    "dev": "nodemon server.js",
-    "dev:projects": "nodemon skills.js"}
+    "dev": "nodemon skills.js"}
 }
